@@ -1,0 +1,73 @@
+/*进行一个背景图片的设定*/
+body
+{
+    /*background-image:url(images/3.png);
+    background-repeat:no-repeat;*/
+    background-size: 1705px 995px;
+    background-image:linear-gradient(to top,Aquamarine,pink);
+}
+
+/*进行一个边框的设定*/
+div.login
+{
+    background:mintcream;
+    width:400px;
+    /*height: 500px;*/
+    border-radius:20px;
+    border-style: none ;
+    margin: 190px;
+    margin-left:auto;   
+    margin-right:auto;
+    box-shadow: 0px 5px 12px #808080;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+/*进行一个输入框的设定*/
+input
+{
+    /*设定输入栏本身属性*/
+    background-color: mintcream;
+    width: 70%;
+    height: 40px;
+    /*控制输入前只有下划线*/
+    BORDER-TOP-STYLE: none; 
+    BORDER-RIGHT-STYLE: none;
+    BORDER-LEFT-STYLE: none; 
+    BORDER-BOTTOM-STYLE: solid;
+    /*控制点击后不会有边框*/
+    outline: none;
+
+    /*设定输入栏位置*/
+    margin-left:12%;
+    margin-bottom: 30px;
+   
+    /*设定输入时的字体属性*/
+    color: lightgray;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+/*进行一个按钮的设定*/
+div.button
+{
+/*设定框本身属性*/
+background:rgba(38, 231, 231, 0.756);
+width:250px;
+height: 40px;
+border-radius:20px;
+border-style: none ;
+
+/*设定框位置*/
+margin-left:auto;   
+margin-right:auto;
+margin-top: 30px;
+box-shadow: 0px 2px 4px #808080;
+
+/*设定字体位置*/
+color:#FFFF;
+padding-top: 15px;
+font-family:'Times New Roman', Times, serif;
+font-size: 20px;
+text-align: center;
+}
