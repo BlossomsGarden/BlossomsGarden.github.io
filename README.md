@@ -1,6 +1,6 @@
 # Merge Ten
 ## · Introduction
-### This is a challenging game written with C++ project.The mission is to click the same and neighbouring number,getting as larger number as possibole.Every click in accord with the criterion will add 1 to the initial number.
+### This is a challenging game written with C艹 .The mission is to click the same and neighbouring number,getting as larger number as possibole.Every click in accord with the criterion will add 1 to the initial number.
 -
 -
 -
