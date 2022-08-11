@@ -11,6 +11,11 @@
  Design codes to achieve automatic merging by computers.The Ranking list will be made according to the final maxium number.
 ## · Code
  I haven't done this part!
+## · Warning
+ No warning
 
 # Conclusion
+## why this?
  In memory of 2021 Larry C++,it was actually a hard time!But it wasn't nothing,I was led into a new,large and spectecullar field.What a year!
+## final words
+ Go for it
