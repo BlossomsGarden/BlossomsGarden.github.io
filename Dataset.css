@@ -5,7 +5,8 @@
     display: flex;
     height: 110px;
     width:100%;
-    background-color:rgba(24, 56, 185, 0.909);
+    /*background-color:rgba(24, 56, 185, 0.909);*/
+    background-color:rgba(15, 62, 249, 0.842);
     margin-bottom: 20px;      /*使页眉与下边界自然的相距一些美丽的空白*/
     position: relative;
 }
