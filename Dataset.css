@@ -1,0 +1,50 @@
+/*容器真是个好东西，少了它可怎么排列页面元素啊！！*/
+
+/*大横页眉的容器*/
+.headContainer {
+    display: flex;
+    height: 110px;
+    width:100%;
+    /*background-color:rgba(24, 56, 185, 0.909);*/
+    background-color:rgba(15, 62, 249, 0.842);
+    margin-bottom: 20px;      /*使页眉与下边界自然的相距一些美丽的空白*/
+    position: relative;
+}
+
+/*页面主干的容器*/
+.bodyContainer{
+    display: flex;
+    height: 100%;
+}
+
+/*左目录所占位置的容器*/
+.leftContainer{
+    width:22%;
+
+}
+/*左目录内部限制长度并靠右对齐的容器*/
+.leftContainerToRight{
+    width:240px;
+    float: right;             /*是栏目*/
+    flex-direction: column;   /*使栏目纵向排列*/
+    padding-right: 20px;      /*左目录与中间的表格分隔开一点*/
+    border-right: 1px solid #80808043;
+}
+/*按钮*/
+.button{
+    font-size: 22px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    line-height:60px;         /*设置为文字的高度，会自动竖直对齐*/
+    background-color: #fcfbfb;   /*从同济网站上抄下来的颜色值*/
+    border: 0.125px solid rgba(128, 128, 128, 0.326);
+    box-shadow: 0px 0px 1px#8080808e;
+    border-radius:0px;
+    cursor: pointer;
+}
+
+/*中间表格的容器*/
+.tableContainer{
+    display: flex;
+    margin-left: 20px;        /*和左目录分隔开一点*/
+}
