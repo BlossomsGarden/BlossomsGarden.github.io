@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--半角不断行空格符：&nbsp，全角可用：&emsp-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jay-1.1</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="swiper/swiper-bundle.css"/>
+    <link rel="stylesheet" href="Jay.css"/>
+  </head>
+
+  <body>
+    <div class="header">
+        <img class="header-img" src="./image/6.png">
+        <div id="header-nav">
+            <ul>
+                <li><a href="https://www.bilibili.com/video/BV1eS4y157Ey"><b>首 页</b></a></li>
+                <li><a href="http://www.bilibili.com/video/BV1AD4y1z7Q7"><b>有 技 术 的</b></a>
+                    <ul>
+                        <li><a href="http://github.com"><b>服务流程</b></a></li>
+                        <li><a href="http://github.com"><b>开店时间</b></a></li>
+                        <li><a href="http://github.com"><b>开店时间</b></a></li>
+                        <li><a href="http://github.com"><b></b>开店时间</b></a></li>
+                        <li><a href="http://github.com"><b></b>开店时间</b></a></li>
+                        <li><a href="http://github.com"><b></b>开店时间</b></a></li>
+                    </ul>
+                </li>
+                <!--其实还有个小bug：因为找不到控制一级导航菜单长度的css，只能强制要求“想做下滑菜单，你自己必须是4个字”-->
+                <li><a href="https://www.bilibili.com/"><b>小 破 站</b></a>
+                    <ul>
+                        <li><a href="http://github.com"><b>服务流程</b></a></li>
+                        <li><a href="http://github.com"><b>开店时间</b></a></li>
+                    </ul>
+                </li>
+                <li><a href="https://mail.tongji.edu.cn/"><b>信 息 反 馈</b></a>
+                    <ul>
+                        <li><a href="http://github.com"><b>服务流程</b></a></li>
+                        <li><a href="http://github.com"><b>开店时间</b></a></li>
+                        <li><a href="http://github.com"><b>开店时间</b></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="./image/1.png"/>
+        </div>
+        <div class="swiper-slide">
+            <img src="./image/2.jpg"/>
+        </div>
+        <div class="swiper-slide">
+            <img src="./image/3.png"/>
+        </div>
+        <div class="swiper-slide">
+            <img src="./image/4.png"/>
+        </div>
+        <div class="swiper-slide">
+            <img src="./image/5.jpg"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="swiper/swiper-bundle.js"></script>
+    <script src="my_javascript/swiper_init.js"></script>
+  </body>
+</html>
