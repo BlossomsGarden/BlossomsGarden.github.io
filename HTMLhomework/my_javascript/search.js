@@ -3,13 +3,24 @@ var barInput =document.getElementById('searchInput');
 
 console.log(buttonClick);
 console.log(barInput);
+
 buttonClick.onclick = function () {
-    Search();
+    if(barInput.value==''){
+        alert('还没输入查找内容啊！');
+    }
+    else{
+        Search();
+    }
 }
 
 document.onkeydown = function (event) {
     if (event.key == 'Enter') {
-        Search();
+        if(barInput.value==''){
+            alert('还没输入查找内容啊！');
+        }
+        else{
+            Search();
+        }
     }
 }
 
