@@ -11,7 +11,7 @@ var swiper = new Swiper(".mySwiper", {
     //自动播放
     autoplay: {
         delay: 3000,                  //自动播放间隔时间
-        disableOnInteraction: true,   //用户触碰,悬停，拖放是否自动播放停止;
+        disableOnInteraction: false,  //用户触碰,悬停，拖放后，自动播放不停止;
         reverseDirection: false,      //是否开启反向轮播
     },
 
@@ -19,7 +19,6 @@ var swiper = new Swiper(".mySwiper", {
     pagination: {
         el: '.swiper-pagination',
         clickable: false,              //点击小圆点切换
-
         //不加以下两行无法手动滑动
         observer:true,               //修改swiper自己或子元素时，自动初始化swiper
         observeParents:true,         //修改swiper的父元素时，自动初始化swiper
