@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <audio src="" id="audio-source"></audio>
+
+    <section class="home-section">
+        <div class="carousel">
+            <img src="assets/images/test1.bmp" class="active" alt="">
+            <img src="assets/images/test2.bmp" alt="">
+            <img src="assets/images/test3.bmp" alt="">
+            <img src="assets/images/test4.bmp" alt="">
+            <img src="assets/images/test5.bmp" alt="">
+        </div>
+
+        <h1 class="heading">最近播放</h1>
+        <div class="playlists-group">
+            <div class="playlist-card">
+                <img src="assets/images/test2.bmp" class="playlist-card-img" alt="">
+                <p class="playlist-card-name">华语热歌</p >
+            </div>
+            <div class="playlist-card">
+                <img src="assets/images/test3.bmp" class="playlist-card-img" alt="">
+                <p class="playlist-card-name">古风戏腔</p >
+            </div>
+            <!-- +3 -->
+        </div>
+
+        <h1 class="heading">根据你的喜好</h1>
+
+        <div class="playlists-group">
+            <div class="playlist-card">
+                <img src="assets/images/test4.bmp" class="playlist-card-img" alt="">
+                <p class="playlist-card-name">失恋回忆</p >
+            </div>
+            <div class="playlist-card">
+            <img src="assets/images/test5.bmp" class="playlist-card-img" alt="">
+            <p class="playlist-card-name">经典老歌</p >
+            </div>
+        </div>
+    </section>
+
+
+    
+
+
+    <section class="music-player-section">
+
+        <img src="assets/images/back.png" class="back-btn icon hide" alt="后退">
+        <img src="assets/images/nav.png" class="nav-btn icon hide" alt="导航">
+    
+        <h1 class="current-song-name">song 1</h1>
+        <p class="artist-name hide">artist 1</p >
+    
+        <img src="assets/images/test1.bmp" class="cover hide" alt="">
+    
+        <div class="seek-bar-container">
+            <input type="range" class="music-seek-bar" value="0">
+            <p class="current-time hide">00 : 00</p >
+            <p class="duration hide">00 : 00</p >
+        </div>
+    
+        <div class="controls">
+            <span class="fas fa-redo">刷新</span>
+            <div class="main">
+                <i class="fas fa-backward active">后退</i>
+                <i class="fas fa-play active">继续</i>
+                <i class="fas fa-pause">暂停</i>
+                <i class="fas fa-forward active">前进</i>
+            </div>
+            <input type="range" class="volume-slider" max="1" value="1" step="0.1">
+            <span class="fas fa-volume-up">音量</span>
+        </div>
+    </section>
+
+
+
+    <section class="playlist">
+
+        <img src="assets/images/back.png" class="back-btn icon" alt="后退">
+    
+        <h1 class="title">播放列表</h1>
+    
+        <div class="queue active">
+            <div class="queue-cover">
+                <img src="assets/images/test1.bmp" alt="">
+                <i class="fas fa-pause"></i>
+            </div>
+            <p class="name"></p >
+        </div>
+
+        <div class="queue active">
+            <div class="queue-cover">
+                <img src="assets/images/test2.bmp" alt="">
+                <i class="fas fa-pause"></i>
+            </div>
+            <p class="name"></p >
+        </div>
+
+
+        <div class="queue active">
+            <div class="queue-cover">
+                <img src="assets/images/test3.bmp" alt="">
+                <i class="fas fa-pause"></i>
+            </div>
+            <p class="name">song 3</p >
+        </div>
+
+        <div class="queue active">
+            <div class="queue-cover">
+                <img src="assets/images/test4.bmp" alt="">
+                <i class="fas fa-pause"></i>
+            </div>
+            <p class="name">song 4</p >
+        </div>
+
+        <div class="queue active">
+            <div class="queue-cover">
+                <img src="assets/images/test5.bmp" alt="">
+                <i class="fas fa-pause"></i>
+            </div>
+            <p class="name">song 5</p >
+        </div>
+
+        <div class="queue active">
+            <div class="queue-cover">
+                <img src="assets/images/test6.bmp" alt="">
+                <i class="fas fa-pause"></i>
+            </div>
+            <p class="name">song 6</p >
+        </div>
+
+        
+        <div class="queue active">
+            <div class="queue-cover">
+                <img src="assets/images/test6.bmp" alt="">
+                <i class="fas fa-pause"></i>
+            </div>
+            <p class="name">null</p >
+        </div>
+
+        
+        <div class="queue active">
+            <div class="queue-cover">
+                <img src="assets/images/test6.bmp" alt="">
+                <i class="fas fa-pause"></i>
+            </div>
+            <p class="name">null</p >
+        </div>
+
+        <div class="queue active">
+            <div class="queue-cover">
+                <img src="assets/images/test6.bmp" alt="">
+                <i class="fas fa-pause"></i>
+            </div>
+            <p class="name">null</p >
+        </div>
+        <!-- // +7 -->
+    </section>
+
+    <script type="text/javascript" src="./data.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>

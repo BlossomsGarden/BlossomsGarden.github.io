@@ -1,0 +1,510 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>一拳把地球打爆</title>
+        <meta content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="listen.css"/>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <!-- common header:https://wenku.baidu.com/view/28e7b82913a6f524ccbff121dd36a32d7375c76e.html -->
+        <div class="header">
+            <img class="header-img" alt="Jay" src="../image/6.png">
+            <div id="header-nav">
+                <ul>
+                    <li><a href="./home.html"><b>首 页</b></a></li>
+                    <li><a href="http://www.bilibili.com/video/BV1AD4y1z7Q7"><b>有 技 术 的</b></a>
+                        <ul>
+                            <li><a href="http://github.com"><b>服务流程</b></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./lottery.html"><b>随 机 播 放</b></a>
+                        <ul>
+                            <li><a href="https://www.bilibili.com/video/BV1Kq4y1f7wv"><b>去 小 破 站</b></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./listen.html"><b>在 线 听</b></a>
+                        <ul>
+                            <li><a href="../listen.html"><b>April</b></a></li>
+                            <li><a href="https://raw.githubusercontent.com/BlossomsGarden/BlossomsGarden.github.io/main/April.flac"><b>下载测试</b></a></li>
+                            <li><a href="../listen.html"><b>April</b></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://mail.tongji.edu.cn/"><b>信 息 反 馈</b></a>
+                        <ul>
+                            <li><a href="http://github.com"><b>联系我们</b></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="search-container">
+                <form action="" style="position:relative">
+                    <input class="search-bar" type="text" id="searchInput" placeholder="芝士搜索栏"/>
+                    <input class="search-btn" type="button" id="searchButton"/>
+                </form>
+
+                <p id="selectedId"></p>
+            </div>
+        </div>
+
+        <!-- Define Audio -->
+        <audio src="" id="audio-source" autoplay="autoplay"></audio>
+
+        <!-- Playlist -->
+        <section class="body-container">
+            <!-- 使用carousel有空白情况：http://docs.wex5.com/bex5-ui-question-list-10157/ -->
+            <div class="carousel">
+                <!-- no class="active" in first line,then there's a blank -->
+                <img src="./image/12.jpg" class="active" alt="">
+                <img src="./image/14.jpg" alt="">
+                <img src="./image/9.png" alt="">
+                <img src="./image/10.jpg" alt="">
+                <img src="./image/11.png" alt="">
+            </div>
+    
+            <h1 class="playlist-heading">最近播放</h1>
+            <div class="playlist-collection">
+                <div class="playlist-collection-card">
+                    <img src="./image/7.jpg" class="playlist-collection-card-img" alt="">
+                    <p class="playlist-collection-card-name">华语热歌</p >
+                </div>
+                <div class="playlist-collection-card">
+                    <img src="./image/8.png" class="playlist-collection-card-img" alt="">
+                    <p class="playlist-collection-card-name">古风戏腔</p >
+                </div>
+            </div>
+    
+            <h1 class="playlist-heading">根据你的喜好</h1>
+            <div class="playlist-collection">
+                <div class="playlist-collection-card">
+                    <img src="./image/9.png" class="playlist-collection-card-img" alt="">
+                    <p class="playlist-collection-card-name">失恋回忆</p >
+                </div>
+                <div class="playlist-collection-card">
+                    <img src="./image/10.jpg" class="playlist-collection-card-img" alt="">
+                    <p class="playlist-collection-card-name">经典老歌</p >
+                </div>
+            </div>
+        </section>
+
+        <!-- Float Music Player -->
+        <section class="music-player-section">
+
+            <img src="./icon/back.png" class="backbtn hide" alt="后退">
+            <img src="./icon/playlist.png" class="playlistbtn hide" alt="播放列表">
+        
+            <h1 class="current-song-name">song 1</h1>
+            <p class="artist-name">artist 1</p >
+        
+            <!-- Hidden When Player Works Normally -->
+            <div class="cover hide">
+                <img src="./image/13.jpg" class="cover-hide-img" alt="">
+
+                <div class="cover-hide-lrc">
+                    <div class = 'music-content'></div>
+                </div>
+            </div>
+
+            <div>
+                <textarea id = "lrc0" style="display: none;">
+            [00:00.50]周杰伦 - 稻香
+            [00:01.46]作词：周杰伦
+            [00:02.37]作曲：周杰伦
+            [00:03.49]编曲：黄雨勋
+            [00:31.08]对这个世界如果
+            [00:32.79]你有太多的抱怨 
+            [00:34.40]跌倒了就不敢继续往前走
+            [00:37.34]为什么人要这么的脆弱
+            [00:39.92]堕落
+            [00:41.54]请你打开电视看看 
+            [00:43.16]多少人为生命在努力
+            [00:45.44]勇敢的走下去
+            [00:47.26]我们是不是该知足
+            [00:49.74]珍惜一切
+            [00:50.75]就算没有拥有
+            [00:54.19]还记得你说家是唯一的城堡 
+            [00:57.78]随着稻香河流继续奔跑
+            [01:00.77]微微笑小时候的梦我知道
+            [01:05.88]不要哭让萤火虫带着你逃跑 
+            [01:09.72]乡间的歌谣永远的依靠
+            [01:12.45]回家吧回到最初的美好
+            [01:41.35]不要这么容易就想放弃
+            [01:43.48]就像我说的
+            [01:44.94]追不到的梦想
+            [01:46.06]换个梦不就得了
+            [01:47.93]为自己的人生鲜艳上色 
+            [01:49.96]先把爱涂上喜欢的颜色
+            [01:53.08]笑一个吧功成名就不是目的
+            [01:55.90]让自己快乐快乐
+            [01:57.11]这才叫做意义
+            [01:58.88]童年的纸飞机
+            [02:00.24]现在终于飞回我手里
+            [02:04.19]所谓的那快乐
+            [02:05.91]赤脚在田里追蜻蜓追到累了
+            [02:08.89]偷摘水果被蜜蜂给叮到怕了
+            [02:11.98]谁在偷笑呢
+            [02:13.45]我靠着稻草人吹着风
+            [02:15.42]唱着歌睡着了
+            [02:17.56]午后吉他在虫鸣中更清脆
+            [02:20.44]阳光洒在路上就不怕心碎
+            [02:23.37]珍惜一切就算没有拥有
+            [02:28.03]还记得你说家是唯一的城堡 
+            [02:31.52]随着稻香河流继续奔跑
+            [02:34.40]微微笑小时候的梦我知道
+            [02:39.52]不要哭让萤火虫带着你逃跑 
+            [02:43.22]乡间的歌谣永远的依靠
+            [02:46.16]回家吧回到最初的美好
+            [02:51.28]还记得你说家是唯一的城堡 
+            [02:54.92]随着稻香河流继续奔跑
+            [02:57.81]微微笑小时候的梦我知道
+            [03:02.87]不要哭让萤火虫带着你逃跑 
+            [03:06.73]乡间的歌谣永远的依靠
+            [03:09.56]回家吧回到最初的美好
+        </textarea>
+    
+        <textarea id = "lrc1" style="display: none;">
+            [00:00.06]周杰伦 - 本草纲目
+            [00:01.76]作词：方文山
+            [00:02.96]作曲：周杰伦
+            [00:03.11]编曲：林迈可
+            [00:04.27]制作人：周杰伦
+            [00:28.68]如果华陀再世
+            [00:29.84]崇洋都被医治
+            [00:31.06]外邦来学汉字
+            [00:32.23]激发我民族意识
+            [00:33.44]马钱子 决明子
+            [00:34.61]苍耳子 还有莲子
+            [00:35.77]黄药子 苦豆子
+            [00:36.89]川楝子 我要面子
+            [00:38.32]用我的方式
+            [00:39.28]改写一部历史
+            [00:40.55]没什么别的事
+            [00:41.66]跟着我念几个字
+            [00:42.93]山药 当归 枸杞 Go
+            [00:44.10]山药 当归 枸杞 Go
+            [00:45.31]看我抓一把中药
+            [00:46.43]服下一帖骄傲
+            [00:47.69]我表情悠哉 跳个大概
+            [00:50.12]动作轻松自在 你学不来
+            [00:52.45]霓虹的招牌 调整好状态
+            [00:54.84]在华丽的城市 等待醒来
+            [00:57.17]我表情悠哉 跳个大概
+            [00:59.55]用书法书朝代 内力传开
+            [01:01.98]豪气挥正楷 给一拳对白
+            [01:04.36]结局平躺下来 看谁厉害
+            [01:28.15]练成什么丹 揉成什么丸
+            [01:29.62]鹿茸切片不能太薄
+            [01:31.02]老师傅的手法不能这样乱抄
+            [01:32.94]龟苓膏 云南白药
+            [01:34.06]还有冬虫夏草
+            [01:35.23]自己的音乐 自己的药
+            [01:36.79]份量刚刚好
+            [01:37.55]听我说中药苦
+            [01:38.82]抄袭应该更苦
+            [01:40.10]快翻开本草纲目
+            [01:41.33]多看一些善本书
+            [01:42.54]蟾酥 地龙 已翻过江湖
+            [01:44.81]这些老祖宗的辛苦
+            [01:46.08]我们一定不能输
+            [01:47.24]就是这个光
+            [01:48.10]就是这个光 一起唱
+            [01:49.52]就是这个光 就是这个光 嘿
+            [01:51.77]让我来调个偏方
+            [01:53.06]专治你媚外的内伤
+            [01:53.86]已扎根千年的汉方
+            [01:55.12]有别人不知道的力量
+            [01:56.94]我表情悠哉 跳个大概
+            [01:58.83]动作轻松自在 你学不来
+            [02:01.36]霓虹的招牌 调整好状态
+            [02:03.69]在华丽的城市 等待醒来
+            [02:06.12]我表情悠哉 跳个大概
+            [02:08.50]用书法书朝代 内力传开
+            [02:10.88]豪气挥正楷 给一拳对白
+            [02:13.21]结局平躺下来 看谁厉害
+            [02:20.69]蹲 小僵尸蹲 小僵尸蹲
+            [02:22.82]又蹲 小僵尸蹲 暗巷点灯
+            [02:25.20]又蹲 小僵尸蹲 钻萝卜坑
+            [02:27.47]又蹲 小僵尸蹲 念咒语哼
+            [02:29.86]蹲 小僵尸蹲 小僵尸蹲
+            [02:32.24]又蹲 小僵尸蹲 暗巷点灯
+            [02:34.63]又蹲 小僵尸蹲 钻萝卜坑
+            [02:36.90]又蹲 小僵尸蹲 念咒语哼
+        </textarea>
+    
+        <textarea id = "lrc2" style="display: none;">
+            [00:00.11]周杰伦 - 枫
+            [00:01.66]作词：宋健彰（弹头）
+            [00:02.82]作曲：周杰伦
+            [00:18.72]乌云在我们心里
+            [00:21.76]搁下一块阴影
+            [00:25.92]我聆听沉寂已久的心情
+            [00:32.03]清晰透明就像美丽的风景
+            [00:39.62]总在回忆里才看得清
+            [00:47.21]被伤透的心
+            [00:49.38]能不能够继续爱我
+            [00:54.28]我用力牵起没温度的双手
+            [01:00.49]过往温柔已经被时间上锁
+            [01:08.01]只剩挥散不去的难过
+            [01:15.59]缓缓飘落的枫叶像思念
+            [01:20.89]我点燃烛火温暖岁末的秋天
+            [01:28.07]极光掠夺天边
+            [01:31.60]北风掠过想你的容颜
+            [01:36.09]我把爱烧成了落叶
+            [01:39.62]却换不回熟悉的那张脸
+            [01:44.07]缓缓飘落的枫叶像思念
+            [01:49.37]为何挽回要赶在冬天来之前
+            [01:56.46]爱你穿越时间
+            [02:00.10]两行来自秋末的眼泪
+            [02:04.54]让爱渗透了地面
+            [02:08.12]我要的只是你在我身边
+            [02:26.99]被伤透的心
+            [02:29.06]能不能够继续爱我
+            [02:33.97]我用力牵起没温度的双手
+            [02:40.13]过往温柔已经被时间上锁
+            [02:47.65]只剩挥散不去的难过
+            [02:54.78]在山腰间飘逸的红雨
+            [03:01.67]随着北风凋零
+            [03:05.05]我轻轻摇曳风铃
+            [03:09.14]想唤醒被遗弃的爱情
+            [03:15.81]雪花已铺满了地
+            [03:19.45]深怕窗外枫叶已结成冰
+            [03:23.79]缓缓飘落的枫叶像思念
+            [03:29.10]我点燃烛火温暖岁末的秋天
+            [03:36.21]极光掠夺天边
+            [03:39.80]北风掠过想你的容颜
+            [03:44.29]我把爱烧成了落叶
+            [03:47.83]却换不回熟悉的那张脸
+            [03:52.22]缓缓飘落的枫叶像思念
+            [03:57.64]为何挽回要赶在冬天来之前
+            [04:04.70]爱你穿越时间
+            [04:08.28]两行来自秋末的眼泪
+            [04:18.62]让爱渗透了地面
+            [04:22.31]我要的只是你在我身边
+        </textarea>
+    
+        <textarea id = "lrc3" style="display: none;">
+            [00:00.00]周杰伦 - 晴天
+            [00:00.89]作词：周杰伦
+            [00:01.84]作曲：周杰伦
+            [00:02.78]编曲：周杰伦
+            [00:03.79]制作人：周杰伦
+            [00:04.91]合声：周杰伦
+            [00:05.91]合声编写：周杰伦
+            [00:07.25]吉他：蔡科俊Again
+            [00:08.42]贝斯：陈任佑
+            [00:09.43]鼓：陈柏州
+            [00:10.21]录音助理：刘勇志
+            [00:11.44]录音工程：杨瑞代（Alfa Studio）
+            [00:13.06]混音工程：杨大纬（杨大纬录音工作室）
+            [00:29.24]故事的小黄花
+            [00:32.64]从出生那年就飘着
+            [00:36.21]童年的荡秋千
+            [00:39.67]随记忆一直晃到现在
+            [00:42.74]Re So So Si Do Si La
+            [00:45.81]So La Si Si Si Si La Si La So
+            [00:49.77]吹着前奏望着天空
+            [00:53.06]我想起花瓣试着掉落
+            [00:56.57]为你翘课的那一天
+            [00:58.68]花落的那一天
+            [01:00.41]教室的那一间
+            [01:02.20]我怎么看不见
+            [01:03.97]消失的下雨天
+            [01:05.71]我好想再淋一遍
+            [01:09.83]没想到失去的勇气我还留着
+            [01:16.01]好想再问一遍
+            [01:17.86]你会等待还是离开
+            [01:24.82]刮风这天我试过握着你手
+            [01:30.47]但偏偏雨渐渐
+            [01:34.04]大到我看你不见
+            [01:38.84]还要多久我才能在你身边
+            [01:45.43]等到放晴的那天
+            [01:48.46]也许我会比较好一点
+            [01:52.81]从前从前有个人爱你很久
+            [01:58.56]但偏偏风渐渐
+            [02:02.02]把距离吹得好远
+            [02:06.82]好不容易又能再多爱一天
+            [02:13.40]但故事的最后
+            [02:16.01]你好像还是说了拜拜
+            [02:34.67]为你翘课的那一天
+            [02:36.79]花落的那一天
+            [02:38.58]教室的那一间
+            [02:40.31]我怎么看不见
+            [02:42.09]消失的下雨天
+            [02:43.82]我好想再淋一遍
+            [02:47.96]没想到失去的勇气我还留着
+            [02:54.11]好想再问一遍
+            [02:55.94]你会等待还是离开
+            [03:02.92]刮风这天我试过握着你手
+            [03:08.60]但偏偏雨渐渐
+            [03:12.07]大到我看你不见
+            [03:16.93]还要多久我才能在你身边
+            [03:23.47]等到放晴的那天
+            [03:26.54]也许我会比较好一点
+            [03:30.95]从前从前有个人爱你很久
+            [03:37.08]偏偏风渐渐
+            [03:40.09]把距离吹得好远
+            [03:44.88]好不容易又能再多爱一天
+            [03:51.50]但故事的最后
+            [03:54.18]你好像还是说了拜拜
+            [03:58.65]刮风这天我试过握着你手
+            [04:01.84]但偏偏雨渐渐
+            [04:03.52]大到我看你不见
+            [04:05.49]还要多久我才能够在你身边
+            [04:08.92]等到放晴那天
+            [04:10.49]也许我会比较好一点
+            [04:12.72]从前从前有个人爱你很久
+            [04:15.79]但偏偏雨渐渐
+            [04:17.52]把距离吹得好远
+            [04:19.36]好不容易又能再多爱一天
+            [04:22.77]但故事的最后
+            [04:24.00]你好像还是说了拜
+        </textarea>
+            </div>
+        
+            <div class="seek-bar-container">
+                <input type="range" class="music-seek-bar" value="0">
+                <p class="current-time hide">00 : 00</p >
+                <p class="duration hide">00 : 00</p >
+            </div>
+        
+            <div class="controls">
+                <div style="display:inline-flex">
+                    <span class="fas fa-redo">
+                        <img class="music-player-section-icon"  src="./icon/replay.png" alt="重播">
+                    </span>
+                    <div class="main hide">
+                        <i class="fas fa-inorder active">
+                            <img class="music-player-section-icon"  src="./icon/playinorder.png" alt="顺序播放">
+                        </i>
+                        <i class="fas fa-cycle">
+                            <img class="music-player-section-icon"  src="./icon/playcycle.png" alt="单曲循环">
+                        </i>
+                    </div>
+                </div>
+                <div class="main">
+                    <i class="fas fa-backward active">
+                        <img class="music-player-section-icon" src="./icon/lastone.png" alt="上一首">
+                    </i>
+                    <!-- Autoplay in this way is forbidden to reduce saorao -->
+                    <i class="fas fa-pause active">
+                        <img class="music-player-section-icon" src="./icon/pause.png" alt="暂停">
+                    </i>
+                    <i class="fas fa-play">
+                        <img class="music-player-section-icon" src="./icon/play.png" alt="播放">
+                    </i>
+                    <i class="fas fa-forward active">
+                        <img class="music-player-section-icon"  src="./icon/nextone.png" alt="下一首">
+                    </i>
+                </div>
+                <div style="display:inline-flex">
+                    <input type="range" class="volume-slider" max="1" value="1" step="0.1">
+                    <span class="fas fa-volume-up">
+                        <!-- Abusolute Position Refer to .volume-slider -->
+                        <img class="music-player-section-icon"  src="./icon/volume.png" alt="音量">
+                    </span>
+                    <span class="fas fa-redo">
+                        <img class="music-player-section-icon"  src="./icon/download.png" alt="下载">
+                    </span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Lateral PlayingList -->
+        <section class="playlist">
+
+            <img src="./icon/back.png" class="playlist-backbtn" alt="后退">
+        
+            <h1 class="playlist-title">播放列表</h1>
+        
+            <div class="queue active">
+                <div class="queue-cover">
+                    <img src="./image/9.png" alt="">
+                    <i class="fas fa-pause"></i>
+                </div>
+                <p class="name">song 1</p >
+            </div>
+    
+            <div class="queue active">
+                <div class="queue-cover">
+                    <img src="./image/12.jpg" alt="">
+                    <i class="fas fa-pause"></i>
+                </div>
+                <p class="name">song 2</p >
+            </div>
+    
+    
+            <div class="queue active">
+                <div class="queue-cover">
+                    <img src="./image/13.jpg" alt="">
+                    <i class="fas fa-pause"></i>
+                </div>
+                <p class="name">song 3</p >
+            </div>
+    
+            <div class="queue active">
+                <div class="queue-cover">
+                    <img src="./image/4.png" alt="">
+                    <i class="fas fa-pause"></i>
+                </div>
+                <p class="name">song 4</p >
+            </div>
+    
+            <div class="queue active">
+                <div class="queue-cover">
+                    <img src="./image/14.jpg" alt="">
+                    <i class="fas fa-pause"></i>
+                </div>
+                <p class="name">song 5</p >
+            </div>
+    
+            <div class="queue active">
+                <div class="queue-cover">
+                    <img src="./image/3.png" alt="">
+                    <i class="fas fa-pause"></i>
+                </div>
+                <p class="name">song 6</p >
+            </div>
+    
+            
+            <div class="queue active">
+                <div class="queue-cover">
+                    <img src="./image/6.png" alt="">
+                    <i class="fas fa-pause"></i>
+                </div>
+                <p class="name">null</p >
+            </div>
+    
+            
+            <div class="queue active">
+                <div class="queue-cover">
+                    <img src="./image/7.jpg" alt="">
+                    <i class="fas fa-pause"></i>
+                </div>
+                <p class="name">null</p >
+            </div>
+    
+            <div class="queue active">
+                <div class="queue-cover">
+                    <img src="./image/8.png" alt="">
+                    <i class="fas fa-pause"></i>
+                </div>
+                <p class="name">null</p >
+            </div>
+            <!-- // +7 -->
+        </section>
+
+
+    <script type="text/javascript" src="./jquery/jquery.js"></script>
+    <script type="text/javascript" src="./my_javascript/search.js"></script>
+    <script type="text/javascript" src="./carousel/newcarousel.js"></script>
+    <script type="text/javascript" src="./my_javascript/playlist.js"></script>
+    <script type="text/javascript" src="./my_javascript/music_player.js"></script>
+    </body>
+</html>
+
+

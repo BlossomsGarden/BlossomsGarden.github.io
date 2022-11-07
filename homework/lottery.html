@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+        <style type="text/css">
+:root {
+	  --twinkle-duration: 4s;
+	}
+
+	.stars0,
+	.stars1,
+	.stars2 {
+	  position: absolute;
+	  z-index: 2;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  -webkit-animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+	  animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+	}
+	.stars0 {
+	  -webkit-animation-delay: calc(var(--twinkle-duration) * -0.22);
+	  animation-delay: calc(var(--twinkle-duration) * -0.22);
+	}
+	.stars1 {
+	  -webkit-animation-delay: calc(var(--twinkle-duration) * -0.44);
+	  animation-delay: calc(var(--twinkle-duration) * -0.44);
+	}
+	.stars2 {
+	  -webkit-animation-delay: calc(var(--twinkle-duration) * -0.66);
+	  animation-delay: calc(var(--twinkle-duration) * -0.66);
+	}
+	@-webkit-keyframes twinkle {
+	  25% {
+	    opacity: 0;
+	  }
+	}
+	@keyframes twinkle {
+	  25% {
+	    opacity: 0;
+	  }
+	}
+	.star {
+	  fill: white;
+	}
+	.star:nth-child(3n) {
+	  opacity: 0.8;
+	}
+	.star:nth-child(7n) {
+	  opacity: 0.6;
+	}
+	.star:nth-child(13n) {
+	  opacity: 0.4;
+	}
+	.star:nth-child(19n) {
+	  opacity: 0.2;
+	}
+
+
+			*{margin: 0px; padding: 0px;}
+
+			.z-div{
+				position: relative;
+                align-items: center;
+				font-size: 40px; 
+				color: #34495E; 
+				font-family: "Source Sans Pro","Helvetica Neue","Arial,sans-serif","courier new";
+				text-align: center;
+				line-height: 180px;
+				background-size: 800%;
+				background-image: linear-gradient(125deg, #BFFEBE, #F6F8B5, #FCD0B3, #BFB6F8, #E8D8B3);
+				animation: bganimation 15s infinite;
+				height: 100vh; 
+				overflow: auto;
+				z-index: 1;
+			}
+			@keyframes bganimation{
+				0%{background-position: 0% 50%;}
+				50%{background-position: 100% 50%;}
+				100%{background-position: 0% 50%;}
+			}
+
+		.btn1{
+			position: relative;
+			z-index: 999;
+			margin:0 auto;
+		}
+
+		.btn2{
+			width:100px;
+			height:50px;
+			font-size: large;
+			position:relative;
+			z-index: 999;
+		}
+
+		</style>
+	</head>
+	<body>		
+			
+
+		<!-- <div class="container" > -->
+            <div class="z-div">	
+                今日限定
+                <h2 id="title">&nbsp;？&nbsp;？</h2>
+                <input id="but" type="button" class="btn2" value="开 始"/>
+            	<button class="btn1" onclick="myFunction()">开始听歌</button>
+            	
+			</div>
+		<!-- </div> -->
+	
+		<script>
+            
+			// 随机数
+			function randomNum(minNum, maxNum) {
+				return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10)
+			}
+            
+			// 随机一个渐变背景色 
+			function randomBG() {
+				var c1 = randomNum(0, 255);
+				var c2 = randomNum(0, 255);
+				document.body.style.background = 'linear-gradient(to left bottom, hsl(' + c1 + ', 100%, 85%) 0%,hsl(' + c2 +
+					', 100%, 85%) 100%)';
+			}
+			randomBG();
+		    var flag=0;
+			var arr = [
+      '乌克丽丽', 'Mojito', '手写的从前', '星晴', '园游会', '麦芽糖', '大笨钟', '暗号', '简单爱', '告白气球','手语','鞋子特大号'
+      ,'粉色海洋','公公偏头痛','爷爷泡的茶','双截棍','红颜如霜','稻香','听妈妈的话','疗伤烧肉粽','星晴','超人不会飞','菊花台'
+      ,'爷爷泡的茶','手写的从前','等你下课','晴天','甜甜的','她的睫毛','给我一首歌的时间','听见下雨的声音','美人鱼','你听得到'
+      ,'龙卷风','明明就','珊瑚海','枫','黑色毛衣','说好的幸福呢','我落泪，情绪零碎','轨迹','说好不哭','爱你没差','不爱我就拉倒','一路向北'
+      ,'借口','夜曲','Mine Mine','断了的弦','花海','爱情悬崖','哪里都是你','反方向的钟','倒影','夜的第七章','止战之殇','以父之名','公公偏头痛'
+      ,'东风破','青花瓷','发如雪','兰亭序','本草纲目','红尘客栈','天涯过客','红颜如霜','爱在西元前','最伟大的作品','还在流浪','说好不哭','错过的烟火','我是如此相信']
+			// 通过id拿到h2的标签
+			var title = document.getElementById('title')
+			var timer = null 
+			function start() {
+				timer = setInterval(function() {
+					var index = Math.floor(Math.random() * arr.length)
+					// 把index对应的数组的内容放到h2标签里面
+					title.innerHTML = arr[index]
+				}, 100)
+			}
+ 
+			function end() {
+				// 通过timer来控制开始按钮
+				clearInterval(timer)
+			}
+
+			but.onclick=function(){
+				if(flag==0){
+					flag++;
+					but.value='停止';
+					start();
+					
+					
+				}else{
+					flag--;
+					but.value='开始';
+					end();				
+				}
+			}
+		</script>
+		<!-- <p id="demo">开始听歌。</p> -->
+
+		<script>
+			for (var i = 0; i < 3; i++) {
+				var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+				svg.setAttribute("class", "stars" + i);
+				svg.setAttribute("width", "100%");
+				svg.setAttribute("height", "100%");
+				svg.setAttribute("preserveAspectRatio", "none");
+				for (let j = 0; j < 100; j++) {
+				var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+				circle.setAttribute("class", "star");
+				circle.setAttribute("cx", r(0, 100) + "%");
+				circle.setAttribute("cy", r(0, 100) + "%");
+				circle.setAttribute("r", r(0.5, 3));
+				svg.appendChild(circle);
+				}
+				document.getElementsByClassName("z-div")[0].appendChild(svg);
+			}
+			
+			function r(m, n) {
+				return (Math.random() * (n - m) + m).toFixed(2);
+			}
+		</script>
+
+
+<script type="text/javascript">
+    $(function() {
+        var myAction = {};
+ 
+        var dom = {
+            btn: $('#btn'),
+            test: $('#z-div')
+        }
+ 
+        $.extend(myAction, {
+            initEvent: function() {
+                dom.btn.on('click', function () {
+                    console.log('点击了按钮');
+                }),                
+                dom.test.on('click', function () {
+                    console.log('点击了蒙层');
+                })
+            }
+        });
+ 
+        var init = function() {
+            myAction.initEvent();
+        }();
+    })
+    </script>
+
+	
+		<script>
+			function myFunction() {
+				window.location.href='https://www.bilibili.com/video/BV1sd4y1K7av/?spm_id_from=pageDriver';
+			}
+		
+		</script>
+	</body>
+</html>

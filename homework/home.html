@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Jay1.0</title>
+        <meta content="width=device-width, initial-scale=1"/>
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="./swiper/swiper-bundle.css"/>
+        <link rel="stylesheet" href="./home.css"/>
+      </head>
+
+    <body>
+        <!-- Header -->
+        <!-- common header:https://wenku.baidu.com/view/28e7b82913a6f524ccbff121dd36a32d7375c76e.html -->
+        <div class="header">
+            <img class="header-img" alt="Jay" src="../image/6.png">
+            <div id="header-nav">
+                <ul>
+                    <li><a href="./home.html"><b>首 页</b></a></li>
+                    <li><a href="http://www.bilibili.com/video/BV1AD4y1z7Q7"><b>有 技 术 的</b></a>
+                        <ul>
+                            <li><a href="http://github.com"><b>服务流程</b></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./lottery.html"><b>随 机 播 放</b></a>
+                        <ul>
+                            <li><a href="https://www.bilibili.com/video/BV1Kq4y1f7wv"><b>去 小 破 站</b></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./listen.html"><b>在 线 听</b></a>
+                        <ul>
+                            <li><a href="../listen.html"><b>April</b></a></li>
+                            <li><a href="https://raw.githubusercontent.com/BlossomsGarden/BlossomsGarden.github.io/main/April.flac"><b>下载测试</b></a></li>
+                            <li><a href="../listen.html"><b>April</b></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://mail.tongji.edu.cn/"><b>信 息 反 馈</b></a>
+                        <ul>
+                            <li><a href="http://github.com"><b>联系我们</b></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="search-container">
+                <form action="" style="position:relative">
+                    <input class="search-bar" type="text" id="searchInput" placeholder="芝士搜索栏"/>
+                    <input class="search-btn" type="button" id="searchButton"/>
+                </form>
+
+                <p id="selectedId"></p>
+            </div>
+        </div>
+
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./image/1.png"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/2.png"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/3.png"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/4.png"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/5.jpg"/>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+
+        
+
+        <!-- Js
+            load加载外部元素，具体可参见：
+            https://www.runoob.com/jquery/jquery-ajax-load.html
+            http://t.zoukankan.com/shine1234-p-12899579.html 
+        -->
+        <script type="text/javascript" src="./jquery/jquery.js"></script>
+        <script type="text/javascript" src="./swiper/swiper-bundle.js"></script>
+        <script type="text/javascript" src="./my_javascript/swiper_init.js"></script>
+        <script src="../my_javascript/search.js"></script>
+        <script type="text/javascript" src="./my_javascript/download.js"></script>
+    </body>
+</html>
